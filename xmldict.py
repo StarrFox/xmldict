@@ -110,7 +110,7 @@ def _from_xml(el, strict):
         attribs = el.items()
         # An element with attributes.
         if attribs and strict:
-            val = dict(('@%s' % k, v) for k, v in dict(attribs).iteritems())
+            val = dict(('@%s' % k, v) for k, v in dict(attribs).items())
             if el.text:
                 converted = _val_and_maybe_convert(el)
                 val['#text'] = el.text
